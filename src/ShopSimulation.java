@@ -13,8 +13,8 @@ public class ShopSimulation {
     private int totalQueuePerUnit = 0;
 
     /**
-     * @param counters       number of the counters
-     * @param simulationTime total simulation time
+     * @param counters       Number of the counters
+     * @param simulationTime Total simulation time
      */
     public ShopSimulation(int counters, int simulationTime) {
         this.counters = counters;
@@ -26,17 +26,17 @@ public class ShopSimulation {
     /**
      * Get the shop object in simulation
      *
-     * @return shop object
+     * @return Shop object
      */
     public Shop getShop() {
         return shop;
     }
 
     /**
-     * increase a unit of time and queue a customer
+     * Increase a unit of time and queue a customer
      *
-     * @param processTime the process time of the customer
-     * @throws SimulationEndException throw when the method call after simulation end
+     * @param processTime The process time of the customer
+     * @throws SimulationEndException Throw when the method call after simulation end
      */
     public void timeLapse(int processTime) throws SimulationEndException {
         if (isSimulationEnd()) {
@@ -53,9 +53,9 @@ public class ShopSimulation {
     }
 
     /**
-     * get whether the simulation end
+     * Get whether the simulation end
      *
-     * @return is the simulation end
+     * @return Is the simulation end
      */
     public boolean isSimulationEnd() {
         return currentTime >= simulationTime;
@@ -65,7 +65,7 @@ public class ShopSimulation {
     /**
      * Add a customer into queue except the time is 0
      *
-     * @param time process time of the customer
+     * @param time Process time of the customer
      */
     private void enqueue(int time) {
         if (time != 0) {
@@ -101,8 +101,8 @@ public class ShopSimulation {
     /**
      * Move a customer into a counter, set counter's end-of-process time
      *
-     * @param counter     counter number
-     * @param processTime the process time of the customer
+     * @param counter     Counter number
+     * @param processTime The process time of the customer
      */
     private void counterIn(int counter, int processTime) {
         shop.setCounterTime(counter, processTime + currentTime);
@@ -122,16 +122,16 @@ public class ShopSimulation {
     }
 
     /**
-     * get total served customer
+     * Get total served customer
      *
-     * @return served customer
+     * @return Served customer
      */
     public int getServedCustomer() {
         return servedCustomer;
     }
 
     /**
-     * get Average Waiting Line Length in simulation
+     * Get Average Waiting Line Length in simulation
      *
      * @return Average Waiting Line Length
      */
@@ -140,7 +140,7 @@ public class ShopSimulation {
     }
 
     /**
-     * get maximum customer in queue while the simulation
+     * Get maximum customer in queue while the simulation
      *
      * @return Maximum Waiting Line Length
      */
@@ -149,18 +149,18 @@ public class ShopSimulation {
     }
 
     /**
-     * get current time in simulation
+     * Get current time in simulation
      *
-     * @return current time
+     * @return Current time
      */
     public int getCurrentTime() {
         return currentTime;
     }
 
     /**
-     * get the number of counters
+     * Get the number of counters
      *
-     * @return number of counters
+     * @return Number of counters
      */
     public int getCounters() {
         return counters;

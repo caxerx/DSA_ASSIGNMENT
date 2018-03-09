@@ -38,8 +38,8 @@ public class Simulation {
             random = new Random(seedNumber); //create random object only on seed number is not zero
         } else {
             //setup the new error message and condition for user input
-            errMessage = "Please input a non-negative integer";
-            condition = i -> i >= 0;
+            errMessage = "Please input a integer between 0 to maximum serve time";
+            condition = i -> i >= 0 && i <= customerMaxServeTime;
         }
 
         /*
@@ -87,7 +87,7 @@ public class Simulation {
      *
      * @param message prompt message
      * @param scanner scanner object
-     * @return valid number
+     * @return Valid number
      */
     public static long inputLongUntilValid(String message, Scanner scanner) {
         Long input = null;
@@ -110,7 +110,7 @@ public class Simulation {
      * @param errMessage error message
      * @param scanner    scanner object
      * @param condition  valid condition
-     * @return valid integer
+     * @return Valid integer
      */
     public static int inputIntegerUntilValid(String message, String errMessage, Scanner scanner, Function<Integer, Boolean> condition) {
         Integer input;

@@ -50,6 +50,11 @@ public class LinkedQueue<T> {
         return queueLinkedList.getSize();
     }
 
+    /**
+     * return all data in the linked queue as string
+     *
+     * @return String of all item in queue
+     */
     @Override
     public String toString() {
         return queueLinkedList.toString();
