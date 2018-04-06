@@ -152,7 +152,7 @@ Input maximum serving time for a customer: 5
 Input seed number: 0
 
 customers:
-a,-1,6,5,4,3,2,1,0
+a,5,4,3,2,1,0
 
 ==========================================
 test case 4 output
@@ -166,10 +166,6 @@ Input seed number:0
 ------------- START SIMULATION ----------------
 A customer came with serving time:a
 Please enter a integer
-A customer came with serving time:-1
-Please input a integer between 0 to maximum serve time
-A customer came with serving time:6
-Please input a integer between 0 to maximum serve time
 A customer came with serving time:5
 R1 Teller_1[6]	Teller_2[0]	Teller_3[0]	Waiting Queue:[ ]
 A customer came with serving time:4

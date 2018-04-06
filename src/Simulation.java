@@ -36,10 +36,6 @@ public class Simulation {
         //Determine random generate or user input
         if (seedNumber != 0) {
             random = new Random(seedNumber); //create random object only on seed number is not zero
-        } else {
-            //setup the new error message and condition for user input
-            errMessage = "Please input a integer between 0 to maximum serve time";
-            condition = i -> i >= 0 && i <= customerMaxServeTime;
         }
 
         /*
